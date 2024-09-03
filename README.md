@@ -9,7 +9,7 @@ Antes de empezar, asegúrate de tener lo siguiente instalado en tu máquina:
 
 - [Visual Studio 2022 o superior](https://visualstudio.microsoft.com/) con la carga de trabajo de desarrollo ASP.NET y desarrollo web.
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) o SQL Server Express.
-- [.NET SDK 6.0](https://dotnet.microsoft.com/download/dotnet/6.0) o superior.
+- [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) o superior.
 - [Postman](https://www.postman.com/) para probar la API (opcional).
 
 ## Configuración del Proyecto
@@ -24,7 +24,7 @@ El proyecto está configurado para usar Entity Framework Core con SQL Server. An
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=EpikApiPersonaDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  "Conexion": "Server=localhost; DataBase=pruebaEpik_BD; TrustServerCertificate=True ; Integrated Security=true"
 }
 ```
 
@@ -33,6 +33,7 @@ El proyecto está configurado para usar Entity Framework Core con SQL Server. An
 Abre la consola de administrador de paquetes en Visual Studio y navega a la carpeta del proyecto. Luego, ejecuta los siguientes comandos para aplicar las migraciones y crear la base de datos:
 
 ```sh
+Add-Migration initial
 Update-Database
 ```
 
